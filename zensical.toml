@@ -13,7 +13,7 @@ This project has received funding from the European High-Performance Computing
 Joint Undertaking (EuroHPC JU) under grant agreements No 951732 and 101101903.
 """
 
-repo_url = "https://github.com/csc-training/csc-hpc-intro/"
+repo_url = "https://github.com/csc-training/csc-hpc-intro"
 repo_name = "csc-training/csc-hpc-intro"
 edit_uri = "edit/main/docs/"
 
@@ -103,7 +103,7 @@ nav = [
 language = "en"
 features = [
   "announce.dismiss",
-  # "content.action.edit",
+  "content.action.edit",
   # "content.action.view",
   "content.code.annotate",
   "content.code.copy",
