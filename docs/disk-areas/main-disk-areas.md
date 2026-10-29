@@ -6,6 +6,12 @@
     - How to share your files, such as software installations and data,
       with other project members on CSC supercomputers
 
+??? abstract "Slides"
+
+    <iframe src="../slides/03_disk_areas.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/03_disk_areas.html){ target=_blank }
+
 :speech_balloon:
 Each user of CSC supercomputers (Roihu and LUMI) has access to different
 disk areas (or directories) for managing their data. Each disk area has

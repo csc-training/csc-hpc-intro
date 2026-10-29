@@ -5,6 +5,12 @@
     - Which disk areas to use for I/O-intensive workloads, i.e.
       frequent read and write operations
 
+??? abstract "Slides"
+
+    <iframe src="../slides/08_datamigration_io.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/08_datamigration_io.html){ target=_blank }
+
 :bangbang:
 This tutorial requires that you have a
 [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/)

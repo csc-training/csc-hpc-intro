@@ -4,6 +4,12 @@
 
     - How to log in to Roihu using the web interface or SSH
 
+??? abstract "Slides"
+
+    <iframe src="../slides/01_logging_in.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/01_logging_in.html){ target=_blank }
+
 :bangbang:
 To begin, make sure you have a
 [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/)

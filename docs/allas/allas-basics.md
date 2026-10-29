@@ -5,6 +5,12 @@
     - How to access Allas
     - Basic Allas commands
 
+??? abstract "Slides"
+
+    <iframe src="../slides/07_allas.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/07_allas.html){ target=_blank }
+
 ## Accessing Allas via Allas web interface
 
 1. Log in to Allas web interface: <https://allas.csc.fi>

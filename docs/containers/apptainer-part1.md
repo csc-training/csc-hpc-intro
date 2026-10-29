@@ -4,6 +4,12 @@
 
     - Basic usage of Apptainer (previously Singularity) containers
 
+??? abstract "Slides"
+
+    <iframe src="../slides/10_singularity.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/10_singularity.html){ target=_blank }
+
 To run these exercises on Roihu, use `sinteractive` or open a compute node
 shell in the [Roihu web interface](https://www.roihu.csc.fi).
 

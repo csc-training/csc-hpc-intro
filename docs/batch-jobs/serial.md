@@ -5,6 +5,12 @@
     - How to use the Slurm job scheduling system for serial jobs
     - How to request resources that **match** the needs of a serial job
 
+??? abstract "Slides"
+
+    <iframe src="../slides/05_batch_jobs.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/05_batch_jobs.html){ target=_blank }
+
 :speech_balloon:
 A batch job consists of two parts: resource requests and the job step(s)
 

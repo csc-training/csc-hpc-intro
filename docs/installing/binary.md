@@ -4,6 +4,12 @@
 
     - How to install binary applications
 
+??? abstract "Slides"
+
+    <iframe src="../slides/09_installing.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/09_installing.html){ target=_blank }
+
 :bangbang:
 This tutorial is done on **Roihu**, which requires that:
 

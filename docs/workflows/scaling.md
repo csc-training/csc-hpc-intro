@@ -7,6 +7,12 @@
     - How to decide on a sensible number of cores
       for a job
 
+??? abstract "Slides"
+
+    <iframe src="../slides/11_speed_up_jobs.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/11_speed_up_jobs.html){ target=_blank }
+
 :point_up_tone1:
 This tutorial is done on **Roihu**, which requires that:
 

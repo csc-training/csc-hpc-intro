@@ -4,6 +4,12 @@
 
     - How to use the `seff` and `sacct` commands
 
+??? abstract "Slides"
+
+    <iframe src="../slides/06_understanding_usage.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/06_understanding_usage.html){ target=_blank }
+
 :point_up_tone1:
 This tutorial should be done on Roihu.
 

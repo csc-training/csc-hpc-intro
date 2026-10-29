@@ -4,6 +4,12 @@
 
     - How to find and load modules
 
+??? abstract "Slides"
+
+    <iframe src="../slides/04_modules.html" loading="lazy"
+        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
+    [Open fullscreen](../slides/04_modules.html){ target=_blank }
+
 :bangbang:
 This tutorial requires that you have a
 [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/)
