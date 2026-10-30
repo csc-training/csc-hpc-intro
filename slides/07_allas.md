@@ -13,7 +13,7 @@ lang: en
    - Default quota is 10 TB per project
 - Clients available on Roihu
    - See Docs CSC for instructions
-       - [Using Allas and Lumi-O object storage services in Roihu](https://docs.csc.fi/computing/allas-in-roihu/)
+       - [Using Allas and LUMI-O object storage services in Roihu](https://docs.csc.fi/computing/allas-in-roihu/)
        - [Tutorial for using Allas in the Roihu supercomputer](https://docs.csc.fi/data/Allas/allas-roihu/)
 
 
@@ -117,7 +117,7 @@ lang: en
 - No way to freeze data
    - Use two projects if you need to prevent others from editing your data
 - Different interfaces may work in different ways
-- Cross using protocols cause problems for files larger than 5 GB, see the [tips for cross usage](https://docs.csc.fi/support/faq/roihu/#12-i-uploaded-data-from-puhtimahti-to-allas-now-im-downloading-it-to-roihu-and-get-an-error-saying-corrupted-on-transfer-md5-hashes-differ)
+- Cross using protocols causes problems for files larger than 5 GB, see the [tips for cross usage](https://docs.csc.fi/support/faq/roihu/#12-i-uploaded-data-from-puhtimahti-to-allas-now-im-downloading-it-to-roihu-and-get-an-error-saying-corrupted-on-transfer-md5-hashes-differ)
 
 # Questions that users should consider
 
@@ -130,11 +130,11 @@ lang: en
 
 # LUMI-O
 
-- LUMI-O is object storage service for LUMI supercomputer
+- LUMI-O is an object storage service for LUMI supercomputer
 - Default quota: 150 TiB
 - LUMI-O uses only S3 protocol and there is no https://allas.csc.fi -like web interface
 - You need to apply for a LUMI-project to use LUMI-O
-- LUMI projects have always a maximum duration, three years in this case, after which the project is closed and you must move your data elsewhere
+- LUMI projects always have a maximum duration, three years in this case, after which the project is closed and you must move your data elsewhere
 - Allas is currently very full, so if you need to store large datasets (>30 TiB) we ask you to use LUMI-O instead
 
 # SD Connect and sensitive data services

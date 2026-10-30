@@ -59,7 +59,7 @@ lang: en
 # Additional fast local disk areas 
 
 - [`$TMPDIR` on login nodes](https://docs.csc.fi/computing/disk/#login-nodes)
-    - Each of the login nodes have 80 GiB of fast local storage (per user) in `$TMPDIR`
+    - Each of the login nodes has 80 GiB of fast local storage (per user) in `$TMPDIR`
     - The local disk is meant for temporary storage (_e.g._ compiling software) and is cleaned frequently
 - [NVMe disks on compute nodes on Roihu](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks)
     - All compute nodes have fast local disks (NVMe) in `$TMPDIR`
@@ -79,7 +79,7 @@ lang: en
 - [`$HOME`](https://docs.csc.fi/computing/roihu-disk/#home-directory) -- small, for the most important (small) files, personal access only
 - [`/scratch`](https://docs.csc.fi/computing/roihu-disk/#scratch-directory) -- main working area, shared with project members, only for data in active use
 - [`/projappl`](https://docs.csc.fi/computing/roihu-disk/#projappl-directory) -- not cleaned up, _e.g._ for shared binaries
-- [`/dataset`](https://docs.csc.fi/computing/roihu-disk/#dataset-directory) -- dataset projects for sharing data between mutiple projects
+- [`/dataset`](https://docs.csc.fi/computing/roihu-disk/#dataset-directory) -- dataset projects for sharing data between multiple projects
 
 # What are the different disk areas for? 2/2
 

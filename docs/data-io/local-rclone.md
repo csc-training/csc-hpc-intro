@@ -74,8 +74,8 @@ If you already have `rclone` command available, skip to
     4. Choose your S3 provider: select the option for
        *Any other S3 compatible provider*
     5. Select that you want to *Enter AWS credentials in the next step.*
-    6. Give the *AWS access key*: the `access_key` value you looked up in step 2.2
-    7. Give the *AWS secret access key*: the `secret_key` value you looked up in step 2.2
+    6. Give the *AWS access key*: the `access_key` value you looked up in step 2
+    7. Give the *AWS secret access key*: the `secret_key` value you looked up in step 2
     8. Region: **1**
     9. Endpoint: `a3s.fi`
     10. Location constraint: leave blank

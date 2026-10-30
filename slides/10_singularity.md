@@ -34,7 +34,7 @@ lang: en
   - More portable since all dependencies are included
 - Limited root privileges inside the container if the build system supports it
   - Package managers (yum, apt, etc.) can be utilized even when not available on the target system
-  - Some containers need full root access in to build
+  - Some containers need full root access to build
 
 # Benefits of containers: Environment isolation
 
@@ -88,7 +88,7 @@ lang: en
   - E.g., to map the host directory `/scratch/project_2001234` to the `/data` directory inside the container: `--bind /scratch/project_2001234:/data`
   - The target directory inside the container does not need to exist, it is created if necessary
   - More than one directory can be mapped
-  - Running containers with `--bind="$(csc-common-bind)` takes care of the most common `--bind` commands automatically
+  - Running containers with `--bind="$(csc-common-bind)"` takes care of the most common `--bind` commands automatically
 
 # Environment variables
 

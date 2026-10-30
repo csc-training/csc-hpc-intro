@@ -76,7 +76,7 @@ lang: en
 
 # Installation methods: Containers
 
-- [Containerization](09_singularity.html) is an efficient method to install software and their dependencies
+- [Containerization](10_singularity.html) is an efficient method to install software and their dependencies
   - Very easy if a ready-made container is available
 - Recommended particularly for software with complex dependencies
 

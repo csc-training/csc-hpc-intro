@@ -23,7 +23,7 @@ lang: en
    - Type a keyword in CSC Docs, copy/paste the error message in your favorite search engine
 4. Send an email to [servicedesk@csc.fi](mailto:servicedesk@csc.fi) containing:
    - A descriptive title
-   - What you wanted to achieve and on which which computer
+   - What you wanted to achieve and on which computer
    - Which commands you have given
    - What error messages resulted
    - [More tips to help us quickly solve your issue](https://docs.csc.fi/support/support-howto/)
@@ -66,8 +66,8 @@ lang: en
 # What if your job fails? Troubleshooting checklist 2/2
 
 5. Check the error file captured by the batch job script
-6. Check any other error files and logs the your program may have produced
-7. Error messaged can sometimes be long, cryptic and a bit intimidating, but ...
+6. Check any other error files and logs your program may have produced
+7. Error messages can sometimes be long, cryptic and a bit intimidating, but ...
    - Try skimming through them and see if you can spot something "human-readable"
    - Often you can spot the actual problem easily if you go through the whole message. Something like "required input file so-and-so missing" or "parameter X out of range", _etc_.
 8. Consult the [FAQ on common Slurm issues](https://docs.csc.fi/support/faq/why-does-my-batch-job-fail/) in Docs CSC

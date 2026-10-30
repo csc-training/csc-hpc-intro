@@ -102,7 +102,7 @@ lang: en
     - Decreased memory consumption if implementation uses replicated data
   - Possible to dedicate threads to specific tasks
   - More complicated to program, overhead from thread creation/destruction
-- Optimum MPI task per node ratio depends on the application and should always be experimented!
+- Optimum MPI task per node ratio depends on the application and should always be experimented with!
 
 # Parallel scaling
 
@@ -222,7 +222,7 @@ lang: en
 - Check the tool you're using, there may be built-in support for running many tasks within a single job step (best option!)
   - E.g. [GROMACS multidir](https://docs.csc.fi/support/tutorials/gromacs-throughput/), [CP2K farming](https://docs.csc.fi/apps/cp2k/#high-throughput-computing-with-cp2k)
   - Also [Python](https://docs.csc.fi/support/tutorials/python-usage-guide/#python-parallel-jobs) and [R](https://docs.csc.fi/support/tutorials/parallel-r/) if you write your own code
-- External tools: Array jobs*, HyperQueue
+- External tools: Array jobs, HyperQueue
   - [Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are simply a Slurm feature for submitting many jobs from a single batch script -- **don't submit hundreds of short jobs!**
   - [HyperQueue](https://docs.csc.fi/apps/hyperqueue/) is a *meta-scheduler*, which allows you to pack many (non-MPI) jobs within a single job step (recommended!)
 
