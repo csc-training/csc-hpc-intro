@@ -13,7 +13,7 @@ endif
 LECTURES = $(wildcard [0-9]*.md)
 
 html:
-	$(SLIDEFACTORY) slides --format html -o $(OUT) $(LECTURES)
+	$(SLIDEFACTORY) slides --format html --defaults_fpath defaults.yaml -o $(OUT) $(LECTURES)
 
 clean:
 	rm -rf $(OUT)

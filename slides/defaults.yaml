@@ -1,0 +1,21 @@
+# Copy of slidefactory's csc-plain theme defaults with navigation controls on
+# and external links opening in a new tab.
+---
+standalone: true
+from: markdown-native_divs
+to: revealjs
+variables:
+    width: 1920
+    height: 1080
+    history: true
+    center: false
+    controls: true
+    controlsLayout: edges
+    transition: none
+    backgroundTransition: none
+    slideNumber: true
+highlight-style: pygments
+include-after-body:
+    - external-links.html
+...
+---

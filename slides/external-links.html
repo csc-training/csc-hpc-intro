@@ -1,0 +1,7 @@
+<script>
+  // Open external links in a new tab instead of inside the slide
+  document.querySelectorAll('a[href^="http"]').forEach(a => {
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+</script>
