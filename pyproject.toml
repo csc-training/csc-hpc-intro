@@ -1,5 +1,5 @@
 [project]
-name = "hpc-env-eff"
+name = "csc-hpc-intro"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
