@@ -1,6 +1,6 @@
 [project]
 site_url = "https://csc-training.github.io/csc-hpc-intro/"
-site_name = "HPC Computing Environment"
+site_name = "CSC HPC Introduction"
 site_description = "Self-learning materials for CSC supercomputers"
 site_author = "CSC – IT Center for Science Ltd."
 
