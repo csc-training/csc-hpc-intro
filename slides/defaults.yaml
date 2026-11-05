@@ -15,6 +15,8 @@ variables:
     backgroundTransition: none
     slideNumber: true
 highlight-style: pygments
+# Level 2 headings become vertical slides
+slide-level: 2
 include-after-body:
     - external-links.html
 ...
