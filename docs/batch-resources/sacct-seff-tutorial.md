@@ -4,14 +4,11 @@
 
     - How to use the `seff` and `sacct` commands
 
-??? abstract "Slides"
-
-    <iframe src="../slides/06_understanding_usage.html" loading="lazy"
-        style="width:100%; aspect-ratio:16/9; border:0" allowfullscreen></iframe>
-    [Open fullscreen](../slides/06_understanding_usage.html){ target=_blank }
+Slides for this topic are on the [module page](index.md).
 
 :point_up_tone1:
-This tutorial should be done on Roihu.
+This tutorial can be done on Roihu or LUMI. Where the commands differ,
+pick your system from the tabs. The choice is remembered for the whole page.
 
 :anger_right:
 `seff` shows detailed data on used resources in an easy-to-read
@@ -39,7 +36,7 @@ but by default it only shows minimal data.
     ```
 
 3. Look for a specific job – _i.e._ specify the job ID using the `-j` option
-   (if you can't think of one, you can use `879004`):
+   (on Roihu, if you can't think of one, you can use `879004`):
 
     ```bash
     sacct -j <slurmjobid>    # replace <slurmjobid> with a valid job ID
@@ -75,29 +72,58 @@ Running `sacct` is heavy on the batch queue system.
 Run a simple array job to practice using `seff` and `sacct`.
 
 :point_up_tone1:
-If you have limited time, you can skip to
+On Roihu, if you have limited time, you can skip to
 [Examining the finished job](#examining-the-finished-job)
 and use the job ID `1225662` (it is the same job).
 
 1. Create a file named `array.sh` and paste the following contents in it:
 
-    ```bash
-    #!/bin/bash
-    #SBATCH --account=<project>      # Choose the billing project. Has to be defined!
-    #SBATCH --time=00:01:30          # Maximum duration of the job. Max: depends on the partition.
-    #SBATCH --partition=small        # Job queues: test, interactive, small, medium, large, longrun, hugemem, hugemem_longrun
-    #SBATCH --job-name=array_job     # Name of the job visible in the queue.
-    #SBATCH --output=out_%A_%a.txt   # Name of the output-file.
-    #SBATCH --error=err_%A_%a.txt    # Name of the error-file.
-    #SBATCH --ntasks=1               # Number of tasks. Max: depends on partition.
-    #SBATCH --cpus-per-task=1        # How many processors work on one task. Max: Number of CPUs per node.
-    #SBATCH --mem=1000               # How much RAM is reserved for job per node. Unit: MiB
-    #SBATCH --array=1-6              # The indices of the array jobs.
+    === "Roihu"
 
-    /appl/soft/manual/chem/x86_64/course/sacct_exercise/test-a ${SLURM_ARRAY_TASK_ID}
-    ```
+        ```bash
+        #!/bin/bash
+        #SBATCH --account=<project>      # Choose the billing project. Has to be defined!
+        #SBATCH --time=00:01:30          # Maximum duration of the job. Max: depends on the partition.
+        #SBATCH --partition=small        # Job queues: test, interactive, small, medium, large, longrun, hugemem, hugemem_longrun
+        #SBATCH --job-name=array_job     # Name of the job visible in the queue.
+        #SBATCH --output=out_%A_%a.txt   # Name of the output-file.
+        #SBATCH --error=err_%A_%a.txt    # Name of the error-file.
+        #SBATCH --ntasks=1               # Number of tasks. Max: depends on partition.
+        #SBATCH --cpus-per-task=1        # How many processors work on one task. Max: Number of CPUs per node.
+        #SBATCH --mem=1000               # How much RAM is reserved for job per node. Unit: MiB
+        #SBATCH --array=1-6              # The indices of the array jobs.
 
-2. Replace `<project>` with your actual project name, e.g. `project_2001234`.
+        /appl/soft/manual/chem/x86_64/course/sacct_exercise/test-a ${SLURM_ARRAY_TASK_ID}
+        ```
+
+    === "LUMI"
+
+        <!-- TODO: test-a is not available on LUMI yet. Copy it to a shared
+             location on LUMI and fix the path below. -->
+
+        ```bash
+        #!/bin/bash
+        #SBATCH --account=<project>      # Choose the billing project. Has to be defined!
+        #SBATCH --time=00:01:30          # Maximum duration of the job. Max: depends on the partition.
+        #SBATCH --partition=small        # Partition for small CPU jobs. "debug" is for short tests.
+        #SBATCH --job-name=array_job     # Name of the job visible in the queue.
+        #SBATCH --output=out_%A_%a.txt   # Name of the output-file.
+        #SBATCH --error=err_%A_%a.txt    # Name of the error-file.
+        #SBATCH --ntasks=1               # Number of tasks. Max: depends on partition.
+        #SBATCH --cpus-per-task=1        # How many processors work on one task. Max: Number of CPUs per node.
+        #SBATCH --mem=1000               # How much RAM is reserved for job per node. Unit: MiB
+        #SBATCH --array=1-6              # The indices of the array jobs.
+
+        /PATH/ON/LUMI/test-a ${SLURM_ARRAY_TASK_ID}
+        ```
+
+        :bulb:
+        The `--mem=1000` request fits within the 2 GB per core that LUMI
+        `small` bills as one core. Requesting more memory per core is billed as
+        extra cores ([LUMI billing](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/billing/)).
+
+2. Replace `<project>` with your actual project name, e.g. `project_2001234`
+   on Roihu or `project_462000123` on LUMI.
 3. Submit the job with the command:
 
     ```bash
@@ -145,9 +171,24 @@ and use the job ID `1225662` (it is the same job).
 
 3. Use `seff` to look at individual sub jobs, e.g.:
 
-    ```bash
-    seff <slurmjobid>_5    # replace <slurmjobid> with the actual job ID
-    ```
+    === "Roihu"
+
+        ```bash
+        seff <slurmjobid>_5    # replace <slurmjobid> with the actual job ID
+        ```
+
+    === "LUMI"
+
+        <!-- TODO: verify whether seff is available on LUMI (by default or via
+             a module) and update this tab. -->
+
+        `seff` may not be available on LUMI. The same information can be
+        computed from `sacct`: compare `TotalCPU` to `Elapsed` × `AllocCPUS`
+        (CPU efficiency) and `MaxRSS` to `ReqMem` (memory efficiency):
+
+        ```bash
+        sacct -o jobid,alloccpus,elapsed,totalcpu,reqmem,maxrss,state -j <slurmjobid>_5    # replace <slurmjobid> with the actual job ID
+        ```
 
 4. Try `sacct` with the `-o` option (discussed above). This time add the fields `reqmem`
    (requested memory) and `timelimit` (requested time):
@@ -172,7 +213,7 @@ see the memory usage for each step.
     ```
 
     :point_up_tone1:
-    If you have limited time, you can skip to step 4 and use the job ID `1225699`
+    On Roihu, if you have limited time, you can skip to step 4 and use the job ID `1225699`
     (it is the same job with adjusted resource requests).
 
 3. Re-run only the failed sub jobs by changing the `--array` line:
@@ -188,3 +229,7 @@ see the memory usage for each step.
 - You can read more about
   [array jobs](https://docs.csc.fi/computing/running/array-jobs) and
   [seff and sacct](https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/) in Docs CSC.
+- For LUMI, see the
+  [Slurm quickstart](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/)
+  and [partitions](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
+  in the LUMI documentation.

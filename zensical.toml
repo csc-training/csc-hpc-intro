@@ -46,6 +46,7 @@ nav = [
     "batch-jobs/bio-data.md"
   ]},
   { "Batch job resource usage" = [
+    "batch-resources/index.md",
     "batch-resources/sacct-seff-tutorial.md",
     "batch-resources/sacct-seff-exercise.md"
   ]},
