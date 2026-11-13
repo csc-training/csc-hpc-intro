@@ -46,4 +46,3 @@ Some tips:
 
 Use this information to set the resource requests for similar new jobs. You can
 also look in [MyCSC](https://my.csc.fi) for previous (monthly) usage per project.
-On LUMI, `lumi-allocations` shows the consumed and remaining allocation of your projects.

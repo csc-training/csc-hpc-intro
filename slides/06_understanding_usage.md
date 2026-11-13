@@ -58,16 +58,6 @@ lang: en
    - Note! Querying data from the Slurm accounting database with `sacct` can be a very heavy operation
       - **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users
 
-## LUMI: checking resource usage
-
-- `sacct` works the same way as on Roihu
-- `seff` may not be available: compute the efficiencies from `sacct`
-   - `sacct -j <slurm jobid> -o jobid,alloccpus,elapsed,totalcpu,reqmem,maxrss,state`
-   - CPU efficiency: `TotalCPU` / (`Elapsed` × `AllocCPUS`)
-   - Memory efficiency: `MaxRSS` / `ReqMem`
-- Same rules: short test runs first (partitions `debug`, `dev-g`), no `sacct` in loops
-- [LUMI Slurm quickstart](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/)
-
 # Billing Units
 
 - CPU time and storage space consume CPU and Storage [Billing Units](https://docs.csc.fi/accounts/billing/), respectively
@@ -101,16 +91,7 @@ lang: en
       - Storage is billed based on the amount of data stored, not by the size of storage quota
    - 1 used TiB hour in Allas equals 1.05 Storage BU (i.e. 1 TiB of data consumes 9198 Storage BU per year)
    - [This and other service billing information in Docs CSC](https://docs.csc.fi/accounts/billing/)
-
-## LUMI: billing
-
-- Allocations are in CPU core-hours, GPU-hours and storage TB-hours
-- `small`, `debug`: billed for cores **or** memory in 2 GB chunks, whichever is larger
-   - 1 core + 8 GB memory is billed as 4 core-hours per hour
-- `standard`, `standard-g`: whole nodes are billed (128 cores or 4 GPUs per node)
-- `small-g`, `dev-g`: billed per GPU (GCD), or per 8 cores / 64 GB if larger, at half rate
-- Check usage with `lumi-allocations` (updated with a delay)
-- [LUMI billing policy](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/billing/)
+     - For LUMI billing policy, [see the LUMI documentation](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/billing/)
 
 # Before starting large-scale calculations
 
